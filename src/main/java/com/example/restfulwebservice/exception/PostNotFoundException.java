@@ -1,4 +1,4 @@
-package com.example.restfulwebservice.user;
+package com.example.restfulwebservice.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 // 4XX -> Client
 // 5XX -> Server
 @ResponseStatus(HttpStatus.NOT_FOUND)
-public class UserNotFoundException extends RuntimeException {
-    public UserNotFoundException(String message) {
+public class PostNotFoundException extends RuntimeException {
+    public PostNotFoundException(String message) {
         super(message);
     }
 }

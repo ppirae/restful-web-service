@@ -13,7 +13,23 @@ spring:
   messages:
     basename: messages
 
-  security:
-    user:
-      name: username
-      password: passw0rd
+  jpa:
+    show-sql: true
+    defer-datasource-initialization: true
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password:
+
+  h2:
+    console:
+      enabled: true
+
+#  security:
+#    user:
+#      name: username
+#      password: passw0rd
